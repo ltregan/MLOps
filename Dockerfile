@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the project files into the container
-COPY output/*.pkl .
+COPY output/*.pkl ./
 
 # Specify the command to run when the container starts
 CMD [ "python", "app/main.py" ]
