@@ -24,8 +24,8 @@ jobs:
         with:
           login-server: registrymlopsloic.azurecr.io
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-          username: ${{ secrets.ACR_USERNAME }}
-          password: ${{ secrets.ACR_PASSWORD }}  
+          username: ${{ secrets.AZURE_CREDENTIALS }}
+          password: ${{ secrets.AZURE_CREDENTIALS }}
 
       - run: |
           docker build . -t registrymlopsloic.azurecr.io/mlops:${{ github.sha }}
