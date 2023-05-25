@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag mlops:$(date +%s)
     - name: Push Docker image to Azure Container Registry
-      uses: git 
+      uses: azure/docker-login@v1
       with:
         login-server: registrymlopsloic.azurecr.io
         username: ${{ secrets.ACR_USERNAME }}
