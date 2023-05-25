@@ -23,7 +23,6 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: registrymlopsloic.azurecr.io
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
           username: ${{ secrets.AZURE_CREDENTIALS }}
           password: ${{ secrets.AZURE_CREDENTIALS }}
 
